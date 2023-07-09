@@ -2,6 +2,9 @@
 #define WINDOWMANAGER_H
 
 #include <QWidget>
+#include <QVBoxLayout>
+#include <QPushButton>
+#include "window.h"
 
 class WindowManager : public QWidget
 {
@@ -11,11 +14,10 @@ public:
 
 public slots:
     void createWindow();
-    void moveWindow(int x, int y);
-    void closeWindow();
 
 private:
-    // Variables y métodos privados según tus necesidades
+    QVBoxLayout *m_layout;
+    QPushButton *m_buttonCreateWindow;
 };
 
 #endif // WINDOWMANAGER_H
